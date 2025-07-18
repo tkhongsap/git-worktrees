@@ -2,6 +2,63 @@
 
 A comprehensive guide and collection of examples for using git worktrees with Claude Code to enable parallel development workflows, allowing multiple AI agents to work on the same codebase simultaneously in isolated environments.
 
+## 🚀 Quick Start with Meta-Commands
+
+This repository now includes a complete **Meta-Command System** that automatically generates parallel processing workflows for any domain:
+
+```bash
+# Generate commands for any task type
+/generate-parallel-commands development "Create user authentication system"
+/generate-parallel-commands testing "Comprehensive test suite for API endpoints"
+/generate-parallel-commands code-review "Review microservices architecture"
+
+# Analyze task complexity and get recommendations
+/analyze-parallel-task "Implement real-time chat with multiple approaches"
+```
+
+### 📁 Repository Structure
+```
+git-worktrees/
+├── .claude/commands/
+│   ├── meta-commands/           # Core meta-command system
+│   │   ├── PARALLEL_PROCESSING_GUIDE.md    # Complete documentation
+│   │   ├── generate-parallel-commands.md   # Main command generator
+│   │   ├── analyze-parallel-task.md         # Task analysis tool
+│   │   ├── create-init-parallel.md          # Initialization generator
+│   │   ├── create-exe-parallel.md           # Execution generator
+│   │   └── create-parallel-code-review.md   # Code review specialization
+│   ├── domain-templates/        # Specialized domain templates
+│   │   ├── create-parallel-development.md   # Development workflows
+│   │   ├── create-parallel-testing.md       # Testing frameworks
+│   │   ├── create-parallel-analysis.md      # System analysis
+│   │   ├── create-parallel-documentation.md # Documentation creation
+│   │   ├── create-parallel-data-processing.md # ETL/Data pipelines
+│   │   └── create-parallel-content-creation.md # Content workflows
+│   └── examples/               # Real-world examples
+│       ├── exe-parallel-website.md         # Website development
+│       ├── init-parallel-website.md        # Website initialization
+│       └── simple-init-parallel-website.md # Quick website setup
+└── main-website/               # Complete website example
+```
+
+### 🎯 Supported Domains
+1. **Development** - Multi-tech stack feature implementation
+2. **Testing** - Comprehensive test suite creation
+3. **Analysis** - System architecture and performance analysis
+4. **Documentation** - Multi-audience content creation
+5. **Data Processing** - ETL/ELT pipeline development
+6. **Content Creation** - Marketing and technical content
+7. **Code Review** - Multi-perspective code assessment
+
+### 📖 Complete Documentation
+See [PARALLEL_PROCESSING_GUIDE.md](./.claude/commands/meta-commands/PARALLEL_PROCESSING_GUIDE.md) for comprehensive documentation including:
+- Quick start examples for all domains
+- GitLab/GitHub integration patterns
+- Enterprise-grade workflows
+- Best practices and troubleshooting
+
+---
+
 ## What Are Git Worktrees?
 
 Git worktrees allow you to check out multiple branches of the same repository simultaneously in separate directories. This is perfect for parallel development where you want to:
@@ -42,7 +99,7 @@ main-website/                    # Base project directory
 │   ├── landing-redesign-2/     # Agent 2 workspace (port 3002)
 │   └── landing-redesign-3/     # Agent 3 workspace (port 3003)
 ├── .claude/                    # Claude Code configuration
-│   └── commands/               # Custom commands
+│   └── commands/examples/      # Website-specific commands
 │       ├── simple-init-parallel-website.md
 │       ├── init-parallel-website.md
 │       └── exe-parallel-website.md
